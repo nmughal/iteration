@@ -11,33 +11,23 @@ function wordFrequency( inputString ) {
 
   // create an object that will store the word count for each word found in the input string
   let countOfWords = {};
-  console.log(countOfWords);
 
   // loop over the array
   arrayOfWords.forEach( function wordCount(word){
     console.log(word);
 
-    if (countOfWords(word) === undefined) {
-      countWords[word] = 1;
+    if (countOfWords[word] === undefined) {
+      countOfWords[word] = 1;
+      console.log(countOfWords);
     } else {
-      countWords(word) = countWords(word) + 1;
+      // countOfWords[word] = countOfWords[word] + 1;
+      countOfWords[word] += 1;
+      console.log(countOfWords[word]);
     }
 
   } );
 
   return countOfWords;
-
-    // console.log("countOfWords. " + arrayOfWords[i] + " now contains: " + countOfWords.A);
-
-
-    // check an array index and add it to countOfWords objects
-    // if (arrayOfWords.includes(currentWord)) {
-    //   ;
-    //   console.log(currentWord);
-    //   console.log(arrayOfWords[i]);
-    // }
 }
 
-
-let countOfWords = wordFrequency(sentence);
-console.log(countOfWords);
+let resultObjects = wordFrequency(sentence);
